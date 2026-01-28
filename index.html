@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SeaSafe – Coast Guard Operations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">SeaSafe Navigator – Coast Guard Operations</div>
+    <div class="status">🟢 ACTIVE RESCUE MODE</div>
+    <div id="utcClock"></div>
+    <div class="lock">🔒 Authorized</div>
+  </header>
+  <div class="layout">
+    <aside class="left-panel">
+      <h3>Active SOS Events</h3>
+      <ul id="sosList"></ul>
+      <h3>Coast Guard Units</h3>
+      <ul id="unitList"></ul>
+    </aside>
+    <main id="map"></main>
+    <aside class="right-panel">
+      <h3>SOS Details</h3>
+      <div id="sosDetails">Select an SOS event</div>
+      <h3>Weather & Drift Prediction</h3>
+      <div id="prediction"></div>
+      <h3>Communication Hub</h3>
+      <textarea placeholder="Send coordination message..."></textarea>
+      <button>Broadcast</button>
+    </aside>
+  </div>
+  <footer class="bottom-bar" id="statusBar">
+    Active Rescues: 0 | Units Deployed: 0 | Coverage: 0% | Last Sync: --
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
